@@ -52,6 +52,11 @@ RUN pip --no-cache-dir install \
     http://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-${TENSORFLOW_VERSION}-cp35-cp35m-linux_x86_64.whl
 # --- ~ DO NOT EDIT OR DELETE BETWEEN THE LINES --- #
 
+RUN ipython profile create
+
+# Set up our ipython config.
+COPY ipython_config.py /root/.ipython/
+
 # Set up our notebook config.
 COPY jupyter_notebook_config.py /root/.jupyter/
 
