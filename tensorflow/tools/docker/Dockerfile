@@ -33,6 +33,8 @@ RUN pip --no-cache-dir install \
         ipykernel \
         jupyter \
         matplotlib \
+        pandas \
+        sklearn \
         numpy \
         scipy \
         Pillow \
